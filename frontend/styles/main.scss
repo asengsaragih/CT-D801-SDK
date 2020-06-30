@@ -1,0 +1,825 @@
+body {
+  background-color: #ffffff;
+  counter-reset: #071c4d;
+  font-family: "Montserrat", sans-serif;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin-right: 54px !important;
+}
+
+.sidebar-sticky {
+  margin-left: 35px;
+  margin-top: 40px;
+}
+
+.bg {
+  background-color: #fafafc;
+  box-shadow: 3px 1px 10px #ccc;
+}
+
+.px-1 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  position: fixed;
+}
+
+.logo {
+  margin-bottom: 120px !important;
+  margin-top: 35px;
+  margin-left: 50px;
+  max-width: 180px;
+  max-height: 50px;
+}
+
+.icon {
+  margin-top: -3px;
+}
+
+.nav-link {
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  color: #bebec0;
+  font-size: 16px;
+  align-content: center;
+
+  &.active {
+    font-weight: bold;
+    color: #071c4d !important;
+
+    &:hover {
+      background-color: #ffa726;
+      color: #ffffff !important;
+    }
+  }
+
+  &:hover {
+    background-color: #ffa726;
+    color: #ffffff;
+  }
+
+  img {
+    max-height: 30px;
+    max-width: 30px;
+
+    &#profile {
+      margin-left: 26px !important;
+      margin-right: 12px !important;
+    }
+  }
+}
+
+h5 {
+  margin: -10px 0 0 110px;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  color: #727176;
+}
+
+h5#genre {
+  font-size: 13px !important;
+  margin-left: 0;
+  margin-top: -15px;
+}
+
+h5#duration {
+  font-size: 13px !important;
+  position: relative;
+  float: right;
+  margin-top: -38px;
+}
+
+h5#rating {
+  font-size: 13px !important;
+  margin-left: 17px;
+  margin-top: -17px;
+}
+
+h1 {
+  color: #071c4d;
+  margin: 100px 0 0 110px;
+  font-size: 28px !important;
+  font-weight: bold !important;
+
+  &#top-rated {
+    margin-top: 10px !important;
+    margin-left: 97px;
+  }
+}
+
+.card {
+  .card-text {
+    color: #071c4d;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  background-color: none;
+  margin: 45px 0 0 60px !important;
+  border: none;
+  max-width: 400px;
+  max-height: 100px;
+
+  img {
+    box-shadow: 5px 5px 10px #ccc;
+    border-radius: 25px;
+  }
+}
+
+.col {
+  overflow-x: hidden;
+  margin-left: 280px;
+}
+
+.row {
+  .row-banner {
+    height: 400px;
+    margin: 0 20px 0 20px;
+  }
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    flex: 0 0 auto;
+  }
+
+  .row-small {
+    height: 500px;
+    margin: -20px 20px 0 20px;
+
+    .small-card {
+      width: 200px;
+
+      .footer-caption {
+        .star-small {
+          font-size: 9px;
+          padding-bottom: 7px;
+        }
+
+        h5#genre,
+        #duration,
+        #rating {
+          font-size: 11px !important;
+        }
+
+        h5#duration {
+          position: relative;
+          float: right;
+        }
+      }
+
+      .card-body-small {
+        padding: 8px;
+
+        #genre {
+          margin: 10px 0 0 0;
+        }
+      }
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.fa-star {
+  font-size: 10px;
+  color: #ffa726;
+}
+
+#account-menu {
+  float: right;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-right: 100px;
+
+  .fas {
+    color: #ccc;
+    margin: 0 10px 0 10px;
+  }
+}
+
+.nav-category {
+  margin: 0 0 0 97px;
+
+  .nav-link {
+    margin: 25px 5px 10px 0;
+    font-size: 13px;
+    padding: 5px 13px 5px 13px !important;
+
+    &:hover {
+      border-radius: 20px !important;
+      font-weight: bold;
+    }
+  }
+
+  .active {
+    background-color: #ffa726 !important;
+    color: #ffffff !important;
+    border-radius: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.nav-category-detail {
+  margin-left: -5px !important;
+
+  .nav-link {
+    margin: 0 5px 0 5px;
+    font-size: 12px;
+    padding: 2px 10px 2px 10px !important;
+    border-radius: 20px !important;
+    font-weight: 600;
+  }
+
+  .active {
+    background-color: transparent !important;
+    color: #dad8d7 !important;
+    border-radius: 20px;
+    padding-top: 0px;
+    border: 2px solid !important;
+    padding-bottom: 0px;
+  }
+
+  &:hover {
+    .active {
+      background-color: transparent !important;
+      color: #dad8d7 !important;
+      border-radius: 20px;
+      padding-top: 0px;
+      border: 2px solid !important;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+.col-overlay {
+  margin: 0 0 0 265px;
+  padding-left: 0;
+  padding-right: 0;
+  position: inherit;
+  width: 100%;
+  height: 300px;
+  // Liner Gradient Over Images
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+
+  img {
+    position: relative;
+    z-index: -1;
+    display: block;
+  }
+}
+
+.img-detail-overlay {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.container-poster {
+  margin-left: 245px;
+  margin-right: auto;
+}
+
+.row-poster {
+  margin-top: -160px;
+
+  .poster-header {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .col-3 {
+    margin-left: 70px;
+    padding: 0 80px 0 80px;
+  }
+}
+
+.tag {
+  color: #999;
+  background: #eff2f5;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.col-content {
+  margin-left: -40px;
+
+  h1#movie-title {
+    width: 1000px;
+    color: #ffffff;
+    font-size: 32px !important;
+    margin: 0;
+  }
+
+  p#language {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-left: 38px;
+  }
+
+  .row-date {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 13px;
+    margin-left: 1px;
+
+    p#date {
+      color: #ffffff;
+      margin-right: 20px;
+    }
+
+    p#time {
+      color: #ffffff;
+    }
+
+    #icon-time {
+      margin-top: -17px;
+      margin-right: 10px;
+      width: 18px;
+      fill: #dad8d7;
+    }
+  }
+
+  .row-social {
+    position: absolute;
+    right: -280px;
+    font-size: 38px;
+    top: 100px;
+
+    svg {
+      margin-right: -10px;
+    }
+  }
+
+  .row-review {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+
+    .rating {
+      margin-left: 90px;
+    }
+
+    .make-vote {
+      margin-top: -4px;
+    }
+
+    p#percentage {
+      margin-top: -33px;
+      margin-left: 33px;
+      font-size: 26px;
+      font-weight: 600;
+      color: rgb(51, 51, 51);
+    }
+
+    p#votes {
+      margin-top: -13px;
+      margin-left: 1.5px;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: normal;
+      color: rgb(153, 153, 153);
+    }
+
+    p#rating {
+      margin-top: 6px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: normal;
+      color: rgb(51, 51, 51);
+    }
+
+    p#caption-rating {
+      margin-top: 8px;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: normal;
+      color: rgb(153, 153, 153);
+    }
+
+    p#caption-rate-it {
+      margin-left: 90px;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: normal;
+      color: rgb(153, 153, 153);
+    }
+  }
+
+  blockquote#main-synopsis {
+    width: 580px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgb(102, 102, 102);
+  }
+
+  p#head-synopsis {
+    margin-left: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+  }
+}
+
+// Star Rating
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating>input {
+  display: none;
+}
+
+.rating>label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating>.half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating>label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating>input:checked~label,
+/* show gold star when clicked */
+.rating:not(:checked)>label:hover,
+/* hover current star */
+.rating:not(:checked)>label:hover~label {
+  color: #ffa726;
+}
+
+/* hover previous stars in list */
+
+.rating>input:checked+label:hover,
+/* hover current star when changing rating */
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+/* lighten current selection */
+.rating>input:checked~label:hover~label {
+  color: #ffed85;
+}
+
+.row-rating-stars {
+  margin-top: -32px;
+  margin-left: 37px;
+}
+
+.far {
+  margin-top: 2px;
+  margin-right: 10px;
+  color: rgb(153, 153, 153);
+}
+
+.row-schedule {
+  .col {
+    width: 440px;
+    margin-left: 0;
+    margin-top: 160px;
+
+    .sidebar-schedule {
+      .row {
+        background-color: #f9f8f8;
+        margin-left: 30px;
+        margin-bottom: auto;
+        overflow: visible;
+        margin-top: 0;
+        padding-top: 35px;
+        padding-left: 54px;
+      }
+
+      .btn-show-more {
+        background-color: #ffa726;
+        border-radius: 0px !important;
+        border: none;
+        width: 285px;
+        margin-bottom: 20px;
+
+        :hover {
+          box-shadow: #727176;
+        }
+      }
+
+      .name-cinema {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .timing {
+        font-size: 12px;
+        font-weight: 600;
+
+        .time {
+          margin-right: 55px;
+          line-height: 30px;
+        }
+
+        .disabled {
+          color: #ccc;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+// Social Button
+
+.footer {
+  a {
+    color: #ffa726;
+  }
+
+  padding: 25px 0;
+  text-align: center;
+  margin-left: 285px;
+}
+
+.footer span.copyright {
+  font-size: 90%;
+  line-height: 40px;
+  text-transform: none;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.footer ul.quicklinks {
+  font-size: 90%;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 50px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+  color: #fff;
+  border-radius: 100%;
+  outline: 0;
+  background-color: #071c4d;
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+  background-color: #ffa726;
+}
+
+.modal-content {
+  i {
+    &.fa-chevron-left {
+      margin-top: 20px;
+      font-size: 100px !important;
+    }
+
+    &.fa-times {
+      color: #071c4d;
+      font-size: 30px !important;
+      padding: 1rem 1rem;
+      position: absolute;
+      right: 7px;
+      top: 0;
+    }
+
+    cursor: pointer;
+  }
+
+  width: 90vw;
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+  outline: 0;
+  margin-left: -360px;
+
+  .modal-header {
+    background-color: #ffa726;
+    padding: 30px 20px 30px 20px;
+
+    a {
+      margin-top: 42px;
+      padding: 14px 42px 14px 42px;
+      border-color: #071c4d;
+      color: #ffffff;
+      background-color: #071c4d;
+      color: #ffffff;
+    }
+
+    a:hover {
+      border-color: #071c4d;
+      background-color: #ffa726;
+      color: #ffffff;
+    }
+  }
+
+  .modal-footer {
+    background-color: #071c4d;
+
+    button {
+      border-color: #ffa726;
+      color: #ffffff;
+    }
+
+    button:hover {
+      background-color: #ffa726;
+    }
+  }
+
+  .row-detail-movie {
+    .select-title {
+      margin-top: 0;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .select-schedule,
+    .select-cinema {
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 19px;
+      color: #fff;
+    }
+  }
+
+  .form-price {
+    span {
+      color: #ffa726;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: -18px;
+      margin-right: 11px;
+    }
+
+    .total-price {
+      span {
+        color: #071c4d;
+      }
+
+      color: #071c4d;
+      padding: 2px 15px 2px 15px;
+      font-size: 20px;
+      font-weight: 700;
+      border: solid #ffa726 2px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.seat-container {
+  margin-top: -55px;
+
+  .seat-row {
+    color: #999;
+  }
+
+  .rowsVip,
+  .rowsReg {
+    .seat {
+      float: left;
+      margin-left: 5px;
+      min-width: 30px;
+      border-radius: 8px;
+      font-size: 13px;
+
+      :hover {
+        color: #fff;
+      }
+
+      a {
+        color: #999;
+      }
+    }
+
+    .seatSpace {
+      float: left;
+      margin-left: 3px;
+      margin-right: 3px;
+      margin-top: 5;
+      margin-bottom: 5;
+      min-width: 30px;
+    }
+  }
+
+  .rowsVip {
+    .seat {
+      border: solid #071c4d 2px;
+    }
+
+    .seat:hover,
+    .seatSelected {
+      a {
+        color: #ffffff;
+      }
+
+      background-color: #071c4d;
+    }
+  }
+
+  .rowsReg {
+    .seat {
+      border: solid #ffa726 2px;
+    }
+
+    .seat:hover,
+    .seatSelected {
+      a {
+        color: #ffffff;
+      }
+
+      background-color: #ffa726;
+    }
+  }
+
+  table {
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-weight: 700;
+
+    .screen {
+      background-color: #ffa726;
+      height: 35px;
+      width: 1200px;
+      color: #fff;
+    }
+  }
+}
+
+.modal {
+  top: -15px !important;
+  height: auto !important;
+}
