@@ -400,7 +400,7 @@
                     <div class=" modal-body text-center">
                         <form class="form-price form-inline justify-content-end">
                             <span>Total Harga :</span>
-                            <p class="shadow total-price">Rp. <span class="price" id="price">500.000</span></p>
+                            <p class="shadow total-price">Rp. <span class="price" id="price">0</span></p>
                         </form>
 
                         <div class="seat-container">
@@ -420,26 +420,26 @@
                                         </td>
                                         <td class="rowsVip">
                                             <div class="seatSpace">&nbsp;</div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">1</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">2</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">3</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">4</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">1</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">2</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">3</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">4</a></div>
                                             <div class="seatSpace">&nbsp;</div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">6</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">7</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">8</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">9</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">10</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">11</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">12</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">13</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">14</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">15</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">6</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">7</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">8</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">9</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">10</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">11</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">12</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">13</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">14</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">15</a></div>
                                             <div class="seatSpace">&nbsp;</div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">17</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">18</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">19</a></div>
-                                            <div class="seat"><a href="#" class="_available" id="seat">20</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">17</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">18</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">19</a></div>
+                                            <div class="seat vip"><a href="#" class="_available" id="seat">20</a></div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -740,22 +740,46 @@
         </script>
 
         <script>
+            var totalPay = 0;
+
             $(".seat").click(function () {
                 $(this).toggleClass("seatSelected");
+
+                var checkSeat = $(this).hasClass("seatSelected");
+                var checkVIP = $(this).hasClass("vip");
+
+                if (checkSeat == true) {
+                    if (checkVIP == true) {
+                        totalPay += 45000;
+                    } else {
+                        totalPay += 35000;
+                    }
+                } else {
+                    if (checkVIP == true) {
+                        totalPay -= 45000;
+                    } else {
+                        totalPay -= 35000;
+                    }
+                }
+                // var total = document.getElementById(price).value;
+
+                document.getElementById('price').innerHTML = totalPay;
             });
+
+
         </script>
 
         <script>
-            document.getElementById("seat").addEventListener("click", hitungHarga);
-
-            function hitungHarga() {
-                var hargaVIP = 40000;
-                var hargaREG = 35000;
-
-                var total = hargaREG + hargaVIP;
-
-                document.getElementById('price').innerHTML = total;
-            }
+            // document.getElementById("seat").addEventListener("click", hitungHarga);
+            //
+            // function hitungHarga() {
+            //     var hargaVIP = 40000;
+            //     var hargaREG = 35000;
+            //
+            //     var total = hargaREG + hargaVIP;
+            //
+            //     document.getElementById('price').innerHTML = total;
+            // }
         </script>
 </body>
 
